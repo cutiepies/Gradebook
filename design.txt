@@ -1,0 +1,30 @@
+design: similar to D2L
+colors:
+
+
+login page:
+ask for email
+ask for password
+button to enter
+
+
+student grade page:
+display classes
+display assignments under that class --> grade
+calc total grade in app with those Assignments
+
+
+
+
+teacher class page:
+see all the classes they have
+enter grades for a class:
+assignment/grade/studentID -->assignment schema
+
+
+then click on a class specifically
+have options:
+  -view students in class
+  -view assignment and students grade
+  -update grades/edit
+  -update students
