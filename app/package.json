@@ -1,0 +1,25 @@
+{
+  "name": "ak7221os",
+  "version": "1.0.0",
+  "description": "This is a json package for a MongoDB db/application for a Gradebook",
+  "main": ".mongorc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cutiepies/Gradebook.git"
+  },
+  "keywords": [
+    "Gradebook",
+    "Teacher",
+    "Student",
+    "grades"
+  ],
+  "author": "Lauren Jones & Rachel Dunkley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cutiepies/Gradebook/issues"
+  },
+  "homepage": "https://github.com/cutiepies/Gradebook#readme"
+}
