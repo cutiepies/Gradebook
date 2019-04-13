@@ -4,7 +4,7 @@ var router = express.Router();
 var mongo = require('mongodb');
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://username:password@cluster0-7i1kc.mongodb.net/test";
+var url = "mongodb+srv://rdunks7:Gandalf1@cluster0-7i1kc.mongodb.net/test";
 
 MongoClient.connect(url, function(err, db) {
   if (err) throw err;
