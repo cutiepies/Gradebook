@@ -14,9 +14,9 @@ var MongoClient = require('mongodb').MongoClient;
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var studentsRouter = require('./routes/students');
+var teacherRouter = require('./routes/teachers');
 
-
-var app = express();
+;var app = express();
 
 
 
