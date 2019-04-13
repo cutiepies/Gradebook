@@ -9,8 +9,6 @@ const ObjectId = require("mongodb").ObjectID;
 
 var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://rdunks7:Gandalf1@cluster0-7i1kc.mongodb.net/admin";
-
 
 
 var indexRouter = require('./routes/index');
