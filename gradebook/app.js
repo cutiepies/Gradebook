@@ -16,9 +16,9 @@ var url = "mongodb+srv://rdunks7:Gandalf1@cluster0-7i1kc.mongodb.net/admin";
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var studentsRouter = require('./routes/students');
+var teacherRouter = require('./routes/teachers');
 
-
-var app = express();
+;var app = express();
 
 
 
@@ -43,6 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/students', studentsRouter);
+app.use('/teachers', teacherRouter);
 
 
 
