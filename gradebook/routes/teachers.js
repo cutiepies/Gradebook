@@ -1,11 +1,7 @@
-//THIS IS THE STUDENT VIEW
-//Once logged in, student should be able to see list of their classes
-
 
 var express = require('express');
 var router = express.Router();
 var mongo = require('mongodb');
-
 
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb+srv://rdunks7:Gandalf1@cluster0-7i1kc.mongodb.net/test";
@@ -14,12 +10,11 @@ router.get('/students', function(req, res) {
 MongoClient.connect(url,function(err,client){
     const db = client.db("gradebook");
     console.log("Connected");
-    var query = { studentID: "in8738bw"};
-    var cursor = db.collection("students").find(query); 
+    var cursor = db.collection("students").find();
        str = "";
        cursor.forEach(function(item) {
            if (item != null) {
-                   str = str + "    studentID courses:  " + item.courses + "</br>";
+                   str = str + "    studentID  " + item.studentID + "</br>";
            }
        }, function(err) {
            res.send(str);

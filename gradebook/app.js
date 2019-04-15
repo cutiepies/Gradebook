@@ -9,12 +9,8 @@ const ObjectId = require("mongodb").ObjectID;
 var url = "mongodb+srv://rdunks7:Gandalf1@cluster0-7i1kc.mongodb.net/test";
 var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
-const db = require('./config/db');
 
-MongoClient.connect(url,(err,database) =>{
-    if (err) return console.log(err)
-    require('./app/routes')(app,{});
-})
+
 
 
 
