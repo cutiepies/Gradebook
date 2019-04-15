@@ -9,8 +9,8 @@
     <ul>
       <%
         var list = '';
-        for (i = 0; i < studentlist.length; i++) {
-          list += '<li><a href="mailto:' + studentlist[i].email + '">' + studentList[i].name + '</a></li>';
+        for (i = 0; i < students.length; i++) {
+          list += '<li><a href="mailto:' + students[i].email + '">' + students[i].name + '</a></li>';
         }
       %>
       <%= list %>

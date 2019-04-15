@@ -1,14 +1,21 @@
 var createError = require('http-errors');
 var express = require('express');
-var BodyParser = require("body-parser");
+var bodyParser = require("body-parser");
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 const ObjectId = require("mongodb").ObjectID;
-
+var url = "mongodb+srv://rdunks7:Gandalf1@cluster0-7i1kc.mongodb.net/test";
 var mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
+const db = require('./config/db');
+
+MongoClient.connect(url,(err,database) =>{
+    if (err) return console.log(err)
+    require('./app/routes')(app,{});
+})
+
 
 
 var indexRouter = require('./routes/index');
@@ -16,7 +23,7 @@ var usersRouter = require('./routes/users');
 var studentsRouter = require('./routes/students');
 //var teacherRouter = require('./routes/teachers');
 
-;var app = express();
+var app = express();
 
 
 
@@ -25,6 +32,7 @@ var studentsRouter = require('./routes/students');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.engine('html',require('ejs').renderFile);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -33,17 +41,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 //
 //// Make our db accessible to our router
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/students', studentsRouter);
-//app.use('/teachers', teacherRouter);
-
-
+app.use('/student', studentsRouter);
 
 
 
